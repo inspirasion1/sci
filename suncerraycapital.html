@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suncerray Capital Inc. — Backing Builders Who Create Something Real</title>
+<meta name="description" content="Suncerray Capital Inc. is a seed-stage investment firm based in San Antonio, TX. We fund the Young's Multimedia Holdings portfolio and back builders in creative technology, AI, and media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --white: #fafaf8;
+    --off-white: #f4f2ee;
+    --warm-gray: #8c8882;
+    --mid-gray: #c8c4be;
+    --light-gray: #e8e4df;
+    --accent: #1a1a1a;
+    --rule: rgba(0,0,0,0.1);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(250, 250, 248, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 4vw;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .nav-logo-placeholder {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-wordmark {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--black); }
+
+  .nav-cta {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    border: 1px solid var(--black);
+    padding: 8px 20px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--black); color: var(--white); }
+
+  /* HERO */
+  .hero {
+    padding: 160px 4vw 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    min-height: 90vh;
+  }
+
+  .hero-left { padding-bottom: 2rem; }
+
+  .hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--warm-gray);
+  }
+
+  .hero-headline {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+    max-width: 380px;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+    border-left: 1px solid var(--light-gray);
+    padding-left: 4rem;
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-meta-item label {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 6px;
+  }
+
+  .hero-meta-item span {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--black);
+    padding: 14px 32px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.8; }
+
+  .btn-secondary {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mid-gray);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-secondary:hover { color: var(--black); border-color: var(--black); }
+
+  /* DIVIDER */
+  .section-rule {
+    width: 100%;
+    height: 1px;
+    background: var(--rule);
+    margin: 0 4vw;
+    width: calc(100% - 8vw);
+  }
+
+  /* SECTIONS */
+  section { padding: 100px 4vw; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label span {
+    font-size: 10px;
+    color: var(--mid-gray);
+  }
+
+  /* WHO WE ARE */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .about-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .about-left h2 em { font-style: italic; }
+
+  .about-left p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-left p:last-child { margin-bottom: 0; }
+
+  .about-left strong {
+    color: var(--black);
+    font-weight: 400;
+  }
+
+  .about-right {
+    padding-top: 1rem;
+  }
+
+  .pullquote {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--black);
+    border-left: 2px solid var(--black);
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-right p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.9;
+  }
+
+  /* WHAT WE BACK */
+  .back-section { background: var(--off-white); }
+
+  .back-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .back-intro h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .back-intro h2 em { font-style: italic; }
+
+  .back-intro p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .back-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pillar {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .pillar:first-child { border-top: 1px solid var(--rule); }
+
+  .pillar-num {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--mid-gray);
+    padding-top: 3px;
+  }
+
+  .pillar-text h3 {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+
+  .pillar-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.7;
+  }
+
+  /* PORTFOLIO */
+  .portfolio-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 5rem;
+    align-items: end;
+  }
+
+  .portfolio-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .portfolio-header h2 em { font-style: italic; }
+
+  .portfolio-header p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.9;
+  }
+
+  .portfolio-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    margin-bottom: 1px;
+  }
+
+  .portfolio-card {
+    background: var(--white);
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .portfolio-card-tag {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .portfolio-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio-card-apps {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .app-tag {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    border: 1px solid var(--light-gray);
+    padding: 4px 10px;
+  }
+
+  .app-tag-link {
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .app-tag-link:hover {
+    color: var(--black);
+    border-color: var(--black);
+    background: var(--off-white);
+  }
+
+  .portfolio-sub {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    border-top: none;
+  }
+
+  .portfolio-sub-card {
+    background: var(--off-white);
+    padding: 1.75rem;
+  }
+
+  .portfolio-sub-card label {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 8px;
+  }
+
+  .portfolio-sub-card span {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  /* THE RAISE */
+  .raise-section { background: var(--black); color: var(--white); }
+
+  .raise-section .section-label { color: rgba(255,255,255,0.4); }
+  .raise-section .section-label span { color: rgba(255,255,255,0.2); }
+
+  .raise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .raise-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--white);
+  }
+
+  .raise-left h2 em { font-style: italic; }
+
+  .raise-left p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .raise-amount {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+    margin: 3rem 0 1rem;
+  }
+
+  .raise-amount-sub {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .raise-right { padding-top: 1rem; }
+
+  .use-of-funds {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .fund-item {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .fund-item:first-child { border-top: 1px solid rgba(255,255,255,0.2); }
+
+  .fund-arrow {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+  }
+
+  .fund-item span {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.92);
+    letter-spacing: 0.02em;
+  }
+
+  .raise-cta {
+    margin-top: 3rem;
+  }
+
+  .raise-cta a {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--white);
+    padding: 14px 32px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .raise-cta a:hover { opacity: 0.85; }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .contact-left h2 em { font-style: italic; }
+
+  .contact-left p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  .contact-left a {
+    color: var(--black);
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid var(--mid-gray);
+    transition: border-color 0.2s;
+  }
+
+  .contact-left a:hover { border-color: var(--black); }
+
+  .contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--black);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-submit {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--black);
+    border: none;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+  }
+
+  .form-submit:hover { opacity: 0.8; }
+
+  .form-note {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--mid-gray);
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--off-white);
+    border-top: 1px solid var(--light-gray);
+    padding: 3rem 4vw;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-wordmark {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .footer-meta {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--mid-gray);
+  }
+
+  .footer-right {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--mid-gray);
+  }
+
+  .footer-right a {
+    color: var(--warm-gray);
+    text-decoration: none;
+  }
+
+  .footer-right a:hover { color: var(--black); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 120px 6vw 80px;
+      min-height: auto;
+      gap: 3rem;
+    }
+
+    .hero-right {
+      border-left: none;
+      border-top: 1px solid var(--light-gray);
+      padding-left: 0;
+      padding-top: 3rem;
+    }
+
+    .about-grid,
+    .back-grid,
+    .portfolio-header,
+    .raise-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+    .portfolio-featured,
+    .portfolio-sub { grid-template-columns: 1fr; }
+
+    .portfolio-sub { grid-template-columns: 1fr 1fr; }
+
+    .form-row { grid-template-columns: 1fr; }
+
+    nav { padding: 0 6vw; }
+
+    .nav-links { display: none; }
+
+    section { padding: 70px 6vw; }
+
+    .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+
+    .hero-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: both; }
+  .fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: both; }
+  .fade-up-delay-3 { animation-delay: 0.35s; opacity: 0; animation-fill-mode: both; }
+  .fade-up-delay-4 { animation-delay: 0.5s; opacity: 0; animation-fill-mode: both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-placeholder">
+      <img src="SuncerrayCapital_transparent.png" alt="Suncerray Capital" style="height: 48px; width: 48px; object-fit: contain;">
+    </div>
+    <span class="nav-wordmark">Suncerray Capital</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#raise">The Raise</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top: 160px; padding-bottom: 120px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end;">
+  <div class="hero-left">
+    <p class="hero-eyebrow fade-up fade-up-delay-1">San Antonio, TX &nbsp;·&nbsp; Delaware C-Corp &nbsp;·&nbsp; Seed Stage</p>
+    <h1 class="hero-headline fade-up fade-up-delay-2">
+      Backing builders<br>who create<br><em>something real.</em>
+    </h1>
+    <p class="hero-sub fade-up fade-up-delay-3">
+      Suncerray Capital Inc. is a seed-stage investment firm funding the Young's Multimedia Holdings portfolio — and the builders behind it.
+    </p>
+  </div>
+  <div class="hero-right fade-up fade-up-delay-4">
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <label>Raise Target</label>
+        <span>$1M — $3M</span>
+      </div>
+      <div class="hero-meta-item">
+        <label>Stage</label>
+        <span>Seed</span>
+      </div>
+      <div class="hero-meta-item">
+        <label>Entity</label>
+        <span>Delaware C-Corp</span>
+      </div>
+      <div class="hero-meta-item">
+        <label>Founded</label>
+        <span>2026</span>
+      </div>
+    </div>
+    <div class="hero-cta-row">
+      <a href="#raise" class="btn-primary">View the Raise</a>
+      <a href="#portfolio" class="btn-secondary">See the Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- WHO WE ARE -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-label">Who We Are <span>— 01</span></p>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2>Built on a name.<br><em>Driven by a legacy.</em></h2>
+        <p>
+          Suncerray Capital Inc. was founded by <strong>Johnny Young</strong>, founder and operator of Young's Multimedia Holdings LLC — a San Antonio-based holding company building at the intersection of creative technology, artificial intelligence, and media.
+        </p>
+        <p>
+          The name Suncerray belongs to two women. A mother and a sister. Both gone. The mother didn't always make the right choices — but she made sure her children never felt what she lacked. She gave everything she had with the limited resources available to her. The sister carried the name forward.
+        </p>
+        <p>
+          This firm carries it further.
+        </p>
+        <p>
+          Suncerray Capital exists because the best things get built by people who figure it out with what they have. That resourcefulness deserves capital behind it. That vision deserves a real chance.
+        </p>
+      </div>
+      <div class="about-right">
+        <blockquote class="pullquote">
+          "She made sure her children never felt what she lacked."
+        </blockquote>
+        <p>
+          Suncerray Capital is not a traditional fund. It is a capital vehicle built with purpose — to move the right resources to the right builders at the right time. The portfolio comes first. The mission extends as it grows.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- WHAT WE BACK -->
+<section id="what-we-back" class="back-section">
+  <div class="section-inner">
+    <p class="section-label">What We Back <span>— 02</span></p>
+    <div class="back-grid">
+      <div class="back-intro">
+        <h2>Portfolio first.<br><em>Mission extends from there.</em></h2>
+        <p>
+          Suncerray Capital's current mandate is funding the growth of the Young's Multimedia Holdings portfolio through the path to profitability. Seven subsidiaries. Six verticals. One operator building all of it.
+        </p>
+        <p>
+          As the portfolio matures, it is our intention to extend Suncerray Capital's reach beyond YMMH — selectively backing early-stage founders where the opportunity, the mission, and the people align. That lane is being built deliberately, not prematurely.
+        </p>
+      </div>
+      <div class="back-pillars">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <div class="pillar-text">
+            <h3>Creative Technology & AI</h3>
+            <p>Software that gives creators leverage. Tools that do the heavy work so people can do the human work.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <div class="pillar-text">
+            <h3>Independent Media & IP</h3>
+            <p>Original storytelling built to scale. Film, television, and streaming properties with franchise potential.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <div class="pillar-text">
+            <h3>Underrepresented Founders</h3>
+            <p>Builders creating category-defining companies with limited resources and outsized vision. That's who we understand best.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-inner">
+    <p class="section-label">The Portfolio <span>— 03</span></p>
+    <div class="portfolio-header">
+      <h2>Seven subsidiaries.<br><em>One holding company.</em></h2>
+      <p>
+        Young's Multimedia Holdings LLC is the parent entity. Each subsidiary operates independently within its vertical, backed by shared infrastructure, technology, and capital through Suncerray Capital.
+      </p>
+    </div>
+
+    <div class="portfolio-featured">
+      <div class="portfolio-card">
+        <p class="portfolio-card-tag">Primary · Technology</p>
+        <h3>Young's Digital Atelier</h3>
+        <p>AI-powered application studio founded in 2025. Four applications live across IP development, content strategy, business intelligence, and operations. Eight more in active development.</p>
+        <div class="portfolio-card-apps">
+          <a href="https://mythoscodex.com" target="_blank" class="app-tag app-tag-link">MythosCodex</a>
+          <a href="https://narrativhq.com" target="_blank" class="app-tag app-tag-link">NarrativHQ</a>
+          <a href="https://novlyn.com" target="_blank" class="app-tag app-tag-link">Novlyn</a>
+          <a href="https://nova-x.app" target="_blank" class="app-tag app-tag-link">N.O.V.A-X</a>
+          <span class="app-tag">+8 in development</span>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <p class="portfolio-card-tag">Primary · Media</p>
+        <h3>Nightgleam Studios</h3>
+        <p>IP development and media production arm. Building an original IP catalogue across film, television, and streaming — with proprietary development infrastructure and a growing production registry.</p>
+        <div class="portfolio-card-apps">
+          <span class="app-tag">Film & Television</span>
+          <span class="app-tag">Original IP</span>
+          <span class="app-tag">Streaming</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-sub">
+      <div class="portfolio-sub-card">
+        <label>Publishing</label>
+        <span>Summit Prime Publishing Group</span>
+      </div>
+      <div class="portfolio-sub-card">
+        <label>Fashion</label>
+        <span>Prestanor Fashion Holdings</span>
+      </div>
+      <div class="portfolio-sub-card">
+        <label>Real Estate</label>
+        <span>Mystic Titan Real Estate</span>
+      </div>
+      <div class="portfolio-sub-card">
+        <label>Wellness</label>
+        <span>Embliss Wellness</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- THE RAISE -->
+<section id="raise" class="raise-section">
+  <div class="section-inner">
+    <p class="section-label">The Raise <span>— 04</span></p>
+    <div class="raise-grid">
+      <div class="raise-left">
+        <h2>The right resources<br>behind what's<br><em>already working.</em></h2>
+        <p>
+          Suncerray Capital Inc. is currently raising a seed round to fund the next phase of the YMMH portfolio. This is a bet on an operator who has already built — with limited resources, no outside capital, and no team — a live portfolio of applications and a growing catalogue of original IP.
+        </p>
+        <div class="raise-amount">$1M — $3M</div>
+        <p class="raise-amount-sub">Seed Round · Open for Discussion</p>
+        <div class="raise-cta">
+          <a href="#contact">Discuss the Opportunity</a>
+        </div>
+      </div>
+      <div class="raise-right">
+        <div class="use-of-funds">
+          <div class="fund-item">
+            <span class="fund-arrow">→</span>
+            <span>Senior technical leadership and key personnel</span>
+          </div>
+          <div class="fund-item">
+            <span class="fund-arrow">→</span>
+            <span>Technical infrastructure and equipment</span>
+          </div>
+          <div class="fund-item">
+            <span class="fund-arrow">→</span>
+            <span>Industry certifications and licensing</span>
+          </div>
+          <div class="fund-item">
+            <span class="fund-arrow">→</span>
+            <span>Media production and content development</span>
+          </div>
+          <div class="fund-item">
+            <span class="fund-arrow">→</span>
+            <span>Portfolio acceleration across YDA and Nightgleam Studios</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label">Contact <span>— 05</span></p>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2>Let's talk about<br><em>the opportunity.</em></h2>
+        <p>
+          If you invest in early-stage creative technology, AI, or media — we'd like to hear from you. Reach out directly or use the form and we'll be in touch.
+        </p>
+        <p>
+          <a href="/cdn-cgi/l/email-protection#096370667c676e4970667c676e7a647c657d60646c6d6068276a6664"><span class="__cf_email__" data-cfemail="b8d2c1d7cdd6dff8c1d7cdd6dfcbd5cdd4ccd1d5dddcd1d996dbd7d5">[email&#160;protected]</span></a>
+        </p>
+        <p style="margin-top: 2rem; font-size: 13px; color: var(--mid-gray);">
+          San Antonio, Texas<br>
+          Delaware C-Corp<br>
+          suncerraycapital.com
+        </p>
+      </div>
+      <div class="contact-right">
+        <form name="contact" method="POST" action="mailto:info@suncerraycapital.com">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="First" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Last" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Firm / Organization</label>
+            <input type="text" name="firm" placeholder="Optional">
+          </div>
+          <div class="form-group">
+            <label>I am reaching out about</label>
+            <select name="subject">
+              <option value="">Select one</option>
+              <option value="investment">Investment Opportunity</option>
+              <option value="partnership">Partnership</option>
+              <option value="portfolio">Portfolio Company Inquiry</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your interest or inquiry..." required></textarea>
+          </div>
+          <p class="form-note">We respond to all serious inquiries within 48 hours.</p>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-wordmark">Suncerray Capital Inc.</span>
+      <span class="footer-meta">&nbsp;·&nbsp; San Antonio, TX &nbsp;·&nbsp; Delaware C-Corp</span>
+    </div>
+    <div class="footer-right">
+      &copy; 2026 Suncerray Capital Inc. All rights reserved. &nbsp;·&nbsp;
+      <a href="/cdn-cgi/l/email-protection#761c0f19031811360f19031811051b031a021f1b13121f175815191b"><span class="__cf_email__" data-cfemail="ec86958399828bac958399828b9f8199809885818988858dc28f8381">[email&#160;protected]</span></a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.about-grid, .back-grid, .portfolio-header, .raise-grid, .contact-grid, .portfolio-featured, .portfolio-sub').forEach(el => {
+    el.style.opacity = '0';
+    el.style.
