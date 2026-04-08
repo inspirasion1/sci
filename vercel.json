@@ -1,0 +1,11 @@
+﻿{
+  "functions": {
+    "api/contact.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    { "src": "/api/contact", "dest": "/api/contact.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
