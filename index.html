@@ -1170,5 +1170,43 @@
 
   document.querySelectorAll('.about-grid, .back-grid, .portfolio-header, .raise-grid, .contact-grid, .portfolio-featured, .portfolio-sub').forEach(el => {
     el.style.opacity = '0';
-    el.style.
-
+    transform = 'translateY(0) translateX(0)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    observer.observe(el);
+  });
+</script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  const data = {
+    first_name: this.first_name.value,
+    last_name: this.last_name.value,
+    email: this.email.value,
+    firm: this.firm.value,
+    subject: this.subject.value,
+    message: this.message.value
+  };
+  try {
+    const res = await fetch('https://suncerraycapital.com/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      btn.textContent = 'Message Sent';
+      this.reset();
+    } else {
+      btn.textContent = 'Error — Try Again';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Error — Try Again';
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
