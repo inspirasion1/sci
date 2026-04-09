@@ -1199,6 +1199,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     if (res.ok) {
       btn.textContent = 'Message Sent';
       this.reset();
+      setTimeout(function() { btn.textContent = 'Send Message'; btn.disabled = false; }, 3000);
     } else {
       btn.textContent = 'Error — Try Again';
       btn.disabled = false;
